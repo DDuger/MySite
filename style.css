@@ -1,14 +1,73 @@
 body{
     margin: 0;
-    background-color: rgb(206, 247, 227);
 }
 .container{
     display: flex;
 }
-.img{
+.logo{
+    margin-top: 10px;
+    margin-left: 25px;
     width: 40px;
     height: 40px;
 }
+.menu{
+    margin-top: 10px;
+}
 a{
     text-decoration: none;
+    color: black;
+    font-size: 30px;
+    padding: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    transition: all 0.8s ease 0s;
+}
+a:hover{
+    color: #b80000;
+}
+.card {
+    width: 500px;
+    height: 450px;
+    margin: 0 auto;
+    position: relative;
+    border: 1px solid #b80000;
+    margin: 50px;
+}
+.product, .description
+{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left:0;
+    top: 0;
+    text-align: center;
+    background-color:#fff;
+}
+.description a {
+    display: inline-block;
+    padding: 10px 30px;
+    margin-top: 30px;
+    text-decoration: none;
+    text-transform:uppercase;
+    color: #fff;
+    background-color:#b80000;
+}
+.product,.description {
+    backface-visibility: hidden;
+}
+.description {
+    box-sizing: border-box;
+    padding: 40px;
+    transform: rotateY(180deg ); 
+}
+.product, .description {
+    transition: 1s;
+}
+.card:hover .product {
+    transform: rotateY(180deg);
+}
+.card:hover .description {
+    transform: rotateY(360deg); 
+}
+img{
+    margin: 50px;
 }
